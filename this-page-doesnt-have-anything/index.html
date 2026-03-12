@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purple's works</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        background-image: url("pattern.png");
+        background-repeat: repeat;
+        background-size: 40px 40px;
+        background-attachment: fixed;
+        background-position: 0 0;
+        animation: scrollPattern 20s linear infinite;
+      }
+      
+      @keyframes scrollPattern {
+        0% {
+          background-position: -300px -200px;
+        }
+        100% {
+          background-position: 300px 200px;
+        }
+      }
+
+
+      .purplesdescription { 
+        width: 40%;
+        position: center;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: rgba(0, 21, 71, 1);
+        border-radius: 7px;
+        font-family: "Comic Sans MS", cursive, sans-serif;
+        outline: 1px solid rgb(255, 255, 255);
+        outline-offset: -3px;  
+      }
+
+      .white-text {
+        color: white;
+      }
+      a {
+        color: purple;
+      }
+    </style>
+</head>
+<body>
+    <div class="purplesdescription">
+      <p class="white-text">this page is empty. come back later.</p>
+      <p class="white-text"><a href="../home/">G O      B A C K</a></p>
+    </div>
+</body>
+</html>
