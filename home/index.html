@@ -4,33 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Purple's cool about page</title>
+    <link rel="stylesheet" href="../style.css"> <!-- background pattern -->
     <style>
-      body { /* i was gonna move this pattern code to css but i have no idea how */
-        margin: 0;
-        height: 100vh;
-        background-image: url("pattern2.png");
-        background-repeat: repeat;
-        background-size: 40px 40px;
-        background-attachment: fixed;
-        background-position: 0 0;
-        animation: scrollPattern 15s linear infinite;
-      }
-      
-      @keyframes scrollPattern {
-        0% {
-          background-position: -300px -200px;
-        }
-        100% {
-          background-position: 300px 200px;
-        }
-      }
-
       #top-nav {
         position: fixed;
         top: 10px;
         left: 50%;
         transform: translateX(-50%);
-        z-index: 1000;
+        z-index: 2;
         display: flex;
         gap: 10px;
       }
@@ -68,11 +49,6 @@
         outline: 1px solid rgb(255, 255, 255);
         outline-offset: -3px;  
       }
-
-      .white-text {
-        color: white;
-      }
-
       .purple-image {
         position: absolute;
         top: 50%;
@@ -81,9 +57,28 @@
         width: 40%;
         height: auto;
       }
+      a {
+        color: purple;
+      }
+    /* i swear you could comment things using "<!-- text -->" in html */
+        body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+    #blackScreen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      z-index: 99;
+    }
     </style>
 </head>
-<body>
+<body class="home">
   <nav id="top-nav">
     <button onclick="scrollToSection('about')">About</button>
     <button onclick="scrollToSection('projects')">other stuff</button>
@@ -91,29 +86,31 @@
   </nav>
 
   <section id="about">
-    <img src="purpel.png" alt="purple" class="purple-image">
+    <img src="/assets/purpel.png" alt="purple" class="purple-image">
     <div class="purplesdescription">
-      <p class="white-text">Howdy, its me! Eden Purple!</p>
-      <p class="white-text">that image on the right is just a placeholder. will be changed.</p>
-      <p class="white-text">this website is undercontruction cause my school lied about tomorrow having no school after giving us an exam and in the mean time, you can check out <a href="https://thepurple.straw.page/" target="_blank" rel="noopener noreferrer">this other website i have!</a></p>
+      <h1>Howdy, its me! Purple!</h1>
+      <h1>that image on the right is just a placeholder. will be changed.</h1>
+      <h1>this website is undercontruction cause <a href="#" id="myActionLink" class="hpnounderline"><span class="spamtomneom">[[Hyperlink Blocked]]</span></a>, you can check out <a href="https://thepurple.straw.page/">this other website i have!</a></h1>
     </div>
   </section>
 
   <section id="projects">
     <div class="purplesdescription">
-      <p class="white-text">projec</p>
-      <p class="white-text"><a href="../this-page-doesnt-have-anything/">projekts</a></p>
+      <h1>projec</h1>
+      <h1><a href="../this-page-doesnt-have-anything/">projekts</a></h1>
     </div>
   </section>
 
   <section id="okaysobasically">
     <div class="purplesdescription">
-      <p class="white-text">spongebob patrick squidward sandy</p>
-      <p class="white-text">larry pearl mr krabs and plankton</p>
-      <p class="white-text">karen squidward gary and miss puff</p>
+      <h1>spongebob patrick squidward sandy</h1>
+      <h1>larry pearl mr krabs and plankton</h1>
+      <h1>karen squidward gary and miss puff</h1>
     </div>
   </section>
 
+
+<audio id="dio" src="/assets/ambience.wav" preload="auto" loop="" volume="0.00001"></audio> <!-- easter egg -->
   <script>
     function scrollToSection(sectionId) {
       const section = document.getElementById(sectionId);
@@ -121,7 +118,18 @@
         section.scrollIntoView({ behavior: 'smooth' });
       }
     }
-/* this thing doesnt even work vro😞
+
+  document.getElementById('myActionLink').addEventListener('click', (event) => {
+    event.preventDefault();
+        const blackScreen = document.createElement('div');
+        const dio = document.getElementById('dio');
+        dio.play();
+          blackScreen.id = 'blackScreen';
+          document.body.appendChild(blackScreen);
+          document.title = "* I think I'm lost..?";
+  });
+
+/* this thing doesnt even work vro😞 | i actually dont fukin know what this does lmao 
     function changethyhash() {  
       const hash = window.location.hash.substring(1);
       if (hash) {
