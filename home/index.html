@@ -45,7 +45,21 @@
         padding: 20px;
         background-color: rgba(0, 21, 71, 1);
         border-radius: 7px;
-        font-family: "Comic Sans MS", cursive, sans-serif;
+        outline: 1px solid rgb(255, 255, 255);
+        outline-offset: -3px;  
+      }
+      .button { 
+        display: flex;
+        width: 30px;
+        height: 30px;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        right: 40%;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: rgba(0, 21, 71, 1);
+        border-radius: 7px;
         outline: 1px solid rgb(255, 255, 255);
         outline-offset: -3px;  
       }
@@ -80,26 +94,31 @@
   </nav>
 
   <section id="about">
-    <img src="../assets/purpel.png" alt="purple" class="purple-image">
+    <img src="../assets/purpel.png" alt="placeholderimage" class="purple-image">
     <div class="purplesdescription">
       <h1>Howdy, its me! Purple!</h1>
-      <h1>that image on the right is just a placeholder. will be changed.</h1>
+      <h1>Im a person that likes drawing and animating, sometimes i code stuff like this.</h1>
       <h1>this website is undercontruction cause <a href="#" id="myActionLink" class="hpnounderline"><span class="spamtomneom">[[Hyperlink Blocked]]</span></a>, you can check out <a href="https://thepurple.straw.page/">this other website i have!</a></h1>
+      <h1>I made this website cause i wanted a place to keep my stuff somewhere everyone can see</h1>
+      <h1>while i dont have much things to put here i gotta make this website first so i can put my future things here</h1>
     </div>
+    <div>
+    <button class="button" onclick="window.location.href='https://www.youtube.com/@ThePurple4'"><img src="../assets/yuhtuh.png" alt="YouTube" width="20px" ></button>
+  </div>
   </section>
 
   <section id="projects">
     <div class="purplesdescription">
-      <h1>projec</h1>
-      <h1><a href="../this-page-doesnt-have-anything/">projekts</a></h1>
+      <h1>Here are my <a href="../projects/">projects</a>, theres not much as i dont have any ideas for long term projects (whats a long term project)</h1>
     </div>
   </section>
 
   <section id="okaysobasically">
     <div class="purplesdescription">
-      <h1>spongebob patrick squidward sandy</h1>
-      <h1>larry pearl mr krabs and plankton</h1>
-      <h1>karen squidward gary and miss puff</h1>
+    <video controls width="200" height="auto">
+      <source src="../assets/blink-182 - spongebob, patrick, squidward, sandy (full version).mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
     </div>
   </section>
 
@@ -120,21 +139,8 @@
         dio.play();
           blackScreen.id = 'blackScreen';
           document.body.appendChild(blackScreen);
-          document.title = "* I think I'm lost..?";
+          document.title = "* I exist.";
   });
-
-/* this thing doesnt even work vro😞 | i actually dont fukin know what this does lmao 
-    function changethyhash() {  
-      const hash = window.location.hash.substring(1);
-      if (hash) {
-        scrollToSection(hash);
-      }
-    }
-    // Call the function when the page loads
-    window.addEventListener('load', changethyhash);
-    document.addEventListener('DOMContentLoaded', function() {
-      handleHashChange();
-    }); */
   </script>
 </body>
 </html>
